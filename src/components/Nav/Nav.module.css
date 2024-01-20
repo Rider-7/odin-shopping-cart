@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Jacques Francois';
+  src: url(../../assets/font/JacquesFrancois-Regular.ttf);
+}
+
+.nav {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 40px;
+  font-size: 40px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Jacques Francois', sans-serif;
+}
