@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Anonymous Pro';
+  src: url(../../assets/font/AnonymousPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Anonymous Pro';
+  src: url(../../assets/font/AnonymousPro-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Jacques Francois';
+  src: url(../../assets/font/JacquesFrancois-Regular.ttf);
+}
+
+.default-theme {
+  background-color: #000000;
+  color: #FFFFFF;
+
+  &:active:enabled {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+}
+
+.pink-theme {
+  background-color: #EE4E91;
+  color: #FFFFFF;
+
+  &:active:enabled {
+    background-color: #2E3D8F;
+  }
+}
+
+.button {
+  font-family: 'Jacques Francois', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  height: 80px;
+  padding: 0px;
+  margin: 0px;
+  padding-inline: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: 600ms;
+
+  &:active:enabled {
+    transition: 30ms;
+  }
+}
+  .cart {
+    composes:button;
+    font-family: 'Anonymous Pro', sans-serif;
+  }
+
+  .small {
+    composes:button;
+    height: 36px;
+    font-size: 16px;
+  }
