@@ -15,7 +15,7 @@ export default function Nav() {
       <Button
         icon={cartSVG}
         alt="cart"
-        style={ButtonStyles.cart}
+        style={ButtonStyles.number}
         theme={ButtonStyles['pink-theme']}
       />
     </nav>
