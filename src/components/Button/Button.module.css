@@ -56,7 +56,7 @@
     transition: 30ms;
   }
 }
-  .cart {
+  .number {
     composes:button;
     font-family: 'Anonymous Pro', sans-serif;
   }
