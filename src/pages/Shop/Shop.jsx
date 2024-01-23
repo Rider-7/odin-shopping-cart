@@ -1,4 +1,4 @@
-import Card from '../components/Card/Card';
+import Card from '../../components/Card/Card';
 import styles from './Shop.module.css';
 
 export default function Shop() {
