@@ -4,7 +4,7 @@ import styles from './Shop.module.css';
 
 export default function Shop() {
   return (
-    <Template>
+    <Template section="SHOP">
       <div className={styles['grid-container']}>
         <h2 className={styles['grid-title']}>SHOES</h2>
         <div className={styles.grid}>
