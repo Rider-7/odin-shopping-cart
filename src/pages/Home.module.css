@@ -20,13 +20,11 @@
 }
 .hero {
 
-  width: 100%;
-  height: fit-content;
-
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 20px;
+  width: fit-content;
+  margin: auto;
 
   & .container {
     width: fit-content;
