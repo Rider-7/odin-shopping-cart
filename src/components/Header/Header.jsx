@@ -4,9 +4,9 @@ import Button from '../Button/Button';
 import ButtonStyles from '../Button/Button.module.css';
 import cartSVG from '../../assets/icon/cart.svg';
 
-import styles from './Nav.module.css';
+import styles from './Header.module.css';
 
-export default function Nav() {
+export default function Header() {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>Boutique</Link>
