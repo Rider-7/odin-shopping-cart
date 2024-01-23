@@ -1,18 +1,4 @@
-@font-face {
-  font-family: 'Anonymous Pro';
-  src: url(../../assets/font/AnonymousPro-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'Anonymous Pro';
-  src: url(../../assets/font/AnonymousPro-Bold.ttf);
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Jacques Francois';
-  src: url(../../assets/font/JacquesFrancois-Regular.ttf);
-}
+@import url("../../templates/font.module.css");
 
 .default-theme {
   background-color: #000000;

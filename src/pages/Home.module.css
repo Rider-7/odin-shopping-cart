@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'Italiana';
-  src: url('../assets/font/Italiana-Regular.ttf');
-}
+@import url("../templates/font.module.css");
 
 .header {
   display: flex;
@@ -21,7 +18,6 @@
     font-size: 148px;
   }
 }
-
 .hero {
 
   width: 100%;

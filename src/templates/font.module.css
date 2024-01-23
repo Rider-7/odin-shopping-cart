@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Italiana';
+  src: url('../assets/font/Italiana-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Jacques Francois';
+  src: url('../assets/font/JacquesFrancois-Regular.ttf');
+}
+
+
+@font-face {
+  font-family: 'Anonymous Pro';
+  src: url('../assets/font/AnonymousPro-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Anonymous Pro';
+  src: url('../assets/font/AnonymousPro-Bold.ttf');
+  font-weight: bold;
+}
+
