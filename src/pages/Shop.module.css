@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Jacques Francois';
+  src: url(../../assets/font/JacquesFrancois-Regular.ttf);
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, 400px);
+  width: 100%;
+  justify-content: center;
+
+  & .title {
+    font-family: 'Jacques Francois', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    grid-column: 1/-1;
+  }
+  
+}
+
