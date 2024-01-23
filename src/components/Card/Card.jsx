@@ -1,6 +1,6 @@
 import styles from './Card.module.css';
 
-import testIMG from'../../assets/image/hero.jpg';
+import testIMG from '../../assets/image/hero.jpg';
 
 export default function Card(props) {
   const { theme, name, price } = props;
