@@ -10,6 +10,7 @@ export default function Template(props) {
         <Link to="/" className={styles.logo}>Boutique</Link>
         <Nav />
       </header>
+      <h1 className={styles.section}>SHOP</h1>
       {children}
     </>
   );
