@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import Nav from '../components/Nav/Nav';
+import Template from './Template';
 import Button from '../components/Button/Button';
 import styles from './Home.module.css';
 
@@ -7,11 +6,7 @@ import heroJPG from '../assets/image/hero.jpg';
 
 export default function Home() {
   return (
-    <>
-      <header className={styles.header}>
-        <Link to="/" className={styles.logo}>Boutique</Link>
-        <Nav />
-      </header>
+    <Template>
       <div className={styles.hero}>
         <div className={styles.container}>
           <span className={`${styles.logo} ${styles.large}`}>Boutique</span>
@@ -19,6 +14,6 @@ export default function Home() {
         </div>
         <img className={styles.image} src={heroJPG} alt="" />
       </div>
-    </>
+    </Template>
   );
 }
