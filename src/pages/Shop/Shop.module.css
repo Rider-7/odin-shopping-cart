@@ -1,5 +1,16 @@
 @import url("../../templates/font.module.css");
 
+.section {
+  font-family: 'Jacques Francois', sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-inline: 72px;
+  margin-block: 20px;
+  
+  font-size: 60px;
+  font-weight: 500;
+}
+
 .grid-container {
   margin-inline: 120px;
   margin-block: 20px;
