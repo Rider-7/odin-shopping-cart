@@ -3,7 +3,7 @@ import styles from './Button.module.css';
 
 export default function Button(props) {
   const {
-    style,
+    modifier,
     theme,
     icon,
     alt,
@@ -11,7 +11,7 @@ export default function Button(props) {
   } = props;
 
   return (
-    <button className={`${style} ${theme}`} type="button">
+    <button className={`${styles[modifier]} ${styles[theme]}`} type="button">
       {icon !== null && <img src={icon} alt={alt} />}
       {children !== null && children}
     </button>
@@ -19,7 +19,7 @@ export default function Button(props) {
 }
 
 Button.propTypes = {
-  style: PropTypes.string,
+  modifier: PropTypes.string,
   theme: PropTypes.string,
   children: PropTypes.node,
   icon: PropTypes.string,
@@ -27,8 +27,8 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  style: styles.button,
-  theme: styles['default-theme'],
+  modifier: 'button',
+  theme: 'default-theme',
   children: null,
   icon: null,
   alt: null,

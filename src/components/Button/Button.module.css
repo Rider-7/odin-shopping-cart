@@ -1,5 +1,7 @@
 @import url("../../templates/font.module.css");
 
+
+/* Themes */
 .default-theme {
   background-color: #000000;
   color: #FFFFFF;
@@ -19,6 +21,7 @@
   }
 }
 
+/* Base Styling */
 .button {
   font-family: 'Jacques Francois', sans-serif;
   font-size: 36px;
@@ -42,6 +45,8 @@
     transition: 30ms;
   }
 }
+
+  /* Modifiers */
   .number {
     composes:button;
     font-family: 'Anonymous Pro', sans-serif;

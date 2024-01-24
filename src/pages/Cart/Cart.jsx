@@ -1,6 +1,5 @@
 import styles from './Cart.module.css';
 import Button from '../../components/Button/Button';
-import ButtonStyles from '../../components/Button/Button.module.css';
 
 export default function Cart() {
   return (
@@ -23,7 +22,7 @@ export default function Cart() {
         </div>
         <div className={styles.checkout}>
           <div>Total Price</div>
-          <Button theme={ButtonStyles['pink-theme']} style={ButtonStyles.small}>GO TO CHECKOUT</Button>
+          <Button theme="pink-theme" modifier="small">GO TO CHECKOUT</Button>
         </div>
       </div>
     </>
