@@ -1,0 +1,31 @@
+dialog::backdrop {
+  background: #0000009f;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: end;
+  width: max-content;
+
+  & .screen {
+    background-color: black;
+  }
+  
+  & .selection {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  & .box {
+
+  }
+
+  & .button {
+    width: max-content;
+  }
+}
+
