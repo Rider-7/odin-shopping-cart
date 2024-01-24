@@ -1,0 +1,47 @@
+.div-config {
+  border-radius: 12px;
+}
+
+.section {
+  font-family: 'Jacques Francois', sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-inline: 72px;
+  margin-block: 20px;
+  
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.cart {
+  composes: div-config;
+  background-color: grey;
+  padding: 20px;
+  width: fit-content;
+  margin: auto;
+}
+
+.list {
+  composes: div-config;
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+
+ & .product {
+    composes: div-config;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+  }
+}
+
+.checkout {
+  composes: div-config;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: white;
+}
+
