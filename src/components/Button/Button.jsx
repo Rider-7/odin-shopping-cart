@@ -8,10 +8,15 @@ export default function Button(props) {
     icon,
     alt,
     children,
+    onClick,
   } = props;
 
   return (
-    <button className={`${styles[modifier]} ${styles[theme]}`} type="button">
+    <button
+      className={`${styles[modifier]} ${styles[theme]}`}
+      type="button"
+      onClick={onClick}
+    >
       {icon !== null && <img src={icon} alt={alt} />}
       {children !== null && children}
     </button>
@@ -24,6 +29,7 @@ Button.propTypes = {
   children: PropTypes.node,
   icon: PropTypes.string,
   alt: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
@@ -32,4 +38,5 @@ Button.defaultProps = {
   children: null,
   icon: null,
   alt: null,
+  onClick: null,
 };
