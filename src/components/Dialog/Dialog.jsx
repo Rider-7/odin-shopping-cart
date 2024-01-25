@@ -9,9 +9,13 @@ import testIMG from '../../assets/image/hero.jpg';
 export default function Dialog() {
   const dialog = useRef();
 
+  function close() {
+    if (dialog.current.open) dialog.current.close();
+  }
+
   useEffect(() => {
     dialog.current.showModal();
-  }, [dialog]);
+  }, []);
 
   return (
     <dialog className={styles.dialog} ref={dialog}>
@@ -31,7 +35,7 @@ export default function Dialog() {
         </div>
         <ProductBox name="Product Name" />
         <div className={styles.buttons}>
-          <Button theme="default-theme" modifier="small">BACK</Button>
+          <Button theme="default-theme" modifier="small" onClick={close}>BACK</Button>
           <Button theme="pink-theme" modifier="small">ADD TO CART</Button>
         </div>
       </div>
