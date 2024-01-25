@@ -49,6 +49,7 @@ dialog {
         margin: 0;
         font-weight: normal;
         height: 90px;
+        overflow-wrap: anywhere;
         overflow: auto;
       }
 
@@ -56,6 +57,7 @@ dialog {
         margin: 0;
         font-weight: normal;
         height: 160px;
+        overflow-wrap:anywhere;
         overflow: auto;
       }
 
