@@ -11,12 +11,12 @@
   font-weight: 500;
 }
 
-.grid-container {
+.container {
   margin-inline: 120px;
   margin-block: 20px;
 }
 
-.grid-title {
+.title {
   font-family: 'Jacques Francois', sans-serif;
   font-weight: 500;
   font-size: 32px;
@@ -25,7 +25,7 @@
   margin-block: 20px;
 }
 
-.grid {
+.flex {
   display: flex;
 
   box-sizing: border-box;
