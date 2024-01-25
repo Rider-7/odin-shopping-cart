@@ -1,5 +1,9 @@
 @import url("../../templates/font.module.css");
 
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
 .section {
   font-family: 'Jacques Francois', sans-serif;
   margin: 0;
