@@ -1,31 +1,76 @@
+@import url("../../templates/font.module.css");
+
 dialog::backdrop {
   background: #0000009f;
 }
 
-.grid {
+dialog {
+  border-radius: 8px;
+  border: 0;
+}
+
+.flex {
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: end;
   width: max-content;
 
-  & .screen {
-    background-color: black;
-  }
-  
-  & .selection {
-    grid-column: 1 / -1;
+  & .product {
+
     display: flex;
-    flex-direction: column;
-    align-items: end;
+    gap: 16px;
+    font-family: 'Jacques Francois', sans-serif;
+
+    & .screen {
+      width: 400px;
+      height: 360px;
+      
+      & .image{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    & .information {
+      width: 240px;
+      height: 360px;
+      background-color: #D9D9D9;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 10px;
+      border-radius: 8px;
+
+      & .name {
+        margin: 0;
+        font-weight: normal;
+        height: 90px;
+        overflow: auto;
+      }
+
+      & .description {
+        margin: 0;
+        font-weight: normal;
+        height: 160px;
+        overflow: auto;
+      }
+
+      & .price {
+        font-family: 'Anonymous Pro', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
   }
 
-  & .box {
-
-  }
-
-  & .button {
-    width: max-content;
+  & .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
