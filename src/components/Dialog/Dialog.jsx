@@ -21,6 +21,11 @@ export default function Dialog(props) {
   let { cartIdRef } = useOutletContext();
   const dialog = useRef();
 
+  function closeDialog() {
+    if (dialog.current.open) dialog.current.close();
+    setQuantity(1);
+  }
+
   function handleQuantity(e) {
     if (e.currentTarget.value === '-') {
       if (quantity > 1) setQuantity((q) => q - 1);
@@ -39,12 +44,7 @@ export default function Dialog(props) {
       },
     ]);
     cartIdRef.current += 1;
-    setQuantity(1);
-  }
-
-  function closeDialog() {
-    if (dialog.current.open) dialog.current.close();
-    setQuantity(1);
+    closeDialog();
   }
 
   return (
