@@ -34,7 +34,7 @@ export default function Dialog(props) {
             <span className={styles.price}><Quantity value={`$${price}`} /></span>
           </div>
         </div>
-        <ProductBox name="Product Name" />
+        <ProductBox isInput name="Product Name" price={price} />
         <div className={styles.buttons}>
           <Button theme="default-theme" modifier="small" onClick={close}>BACK</Button>
           <Button theme="pink-theme" modifier="small">ADD TO CART</Button>
