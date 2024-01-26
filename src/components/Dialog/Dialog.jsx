@@ -17,7 +17,8 @@ export default function Dialog(props) {
   } = props;
 
   const [quantity, setQuantity] = useState(0);
-  const [cart, setCart] = useOutletContext();
+  const [cart, setCart] = useOutletContext().cartState;
+  let { cartIdRef } = useOutletContext();
   const dialog = useRef();
 
   function handleQuantity(e) {
@@ -30,13 +31,14 @@ export default function Dialog(props) {
     setCart([
       ...cart,
       {
+        uid: cartIdRef.current,
         id,
         name,
         price,
         quantity,
       },
     ]);
-    console.log(cart);
+    cartIdRef.current += 1;
   }
 
   function closeDialog() {
