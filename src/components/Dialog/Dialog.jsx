@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import styles from './Dialog.module.css';
 
@@ -15,30 +15,47 @@ export default function Dialog(props) {
     price,
   } = props;
 
+  const [quantity, setQuantity] = useState(0);
   const dialog = useRef();
+
+  function handleQuantity(e) {
+    if (e.currentTarget.value === '-') {
+      if (quantity > 0) setQuantity((q) => q - 1);
+    } else if (quantity < 99) setQuantity((q) => q + 1);
+  }
 
   function closeDialog() {
     if (dialog.current.open) dialog.current.close();
   }
 
   function addToCart() {
-
+    
   }
 
   return (
     <dialog id="modal" className={styles.dialog} ref={dialog}>
       <div className={styles.flex}>
-        <div className={styles.product}>
-          <Screen imgUrl={imgUrl} />
-          <Information name={name} description={description} price={price} />
-        </div>
-        <ProductBox isInput name="Product Name" price={price} />
-        <div className={styles.buttons}>
-          <Button theme="default-theme" modifier="small" onClick={closeDialog}>BACK</Button>
-          <Button theme="pink-theme" modifier="small" onClick={addToCart}>ADD TO CART</Button>
-        </div>
+        <Product imgUrl={imgUrl} name={name} description={description} price={price} />
+        <ProductBox isInput name="Product Name" price={price} quantity={quantity} handleQuantity={handleQuantity} />
+        <Footer closeDialog={closeDialog} addToCart={addToCart} />
       </div>
     </dialog>
+  );
+}
+
+function Product(props) {
+  const {
+    imgUrl,
+    name,
+    description,
+    price
+  } = props;
+
+  return (
+    <div className={styles.product}>
+      <Screen imgUrl={imgUrl} />
+      <Information name={name} description={description} price={price} />
+    </div>
   );
 }
 
@@ -62,6 +79,17 @@ function Screen(props) {
   return (
     <div className={styles.screen}>
       <img className={styles.image} src={imgUrl} alt="" />
+    </div>
+  );
+}
+
+function Footer(props) {
+  const { closeDialog, addToCart } = props;
+
+  return (
+    <div className={styles.buttons}>
+      <Button theme="default-theme" modifier="small" onClick={closeDialog}>BACK</Button>
+      <Button theme="pink-theme" modifier="small" onClick={addToCart}>ADD TO CART</Button>
     </div>
   );
 }
