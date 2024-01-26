@@ -39,10 +39,12 @@ export default function Dialog(props) {
       },
     ]);
     cartIdRef.current += 1;
+    setQuantity(1);
   }
 
   function closeDialog() {
     if (dialog.current.open) dialog.current.close();
+    setQuantity(1);
   }
 
   return (
