@@ -16,14 +16,14 @@ export default function Dialog(props) {
     price,
   } = props;
 
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const [cart, setCart] = useOutletContext().cartState;
   let { cartIdRef } = useOutletContext();
   const dialog = useRef();
 
   function handleQuantity(e) {
     if (e.currentTarget.value === '-') {
-      if (quantity > 0) setQuantity((q) => q - 1);
+      if (quantity > 1) setQuantity((q) => q - 1);
     } else if (quantity < 99) setQuantity((q) => q + 1);
   }
 
