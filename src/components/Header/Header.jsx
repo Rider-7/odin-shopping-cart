@@ -1,11 +1,18 @@
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 
 import Button from '../Button/Button';
 import cartSVG from '../../assets/icon/cart.svg';
 
 import styles from './Header.module.css';
 
-export default function Header() {
+export default function Header(props) {
+  const { cart } = props;
+
+  let total = 0;
+  cart.forEach((product) => {
+    total += product.quantity;
+  });
+
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>Boutique</Link>
@@ -18,7 +25,9 @@ export default function Header() {
             alt="cart"
             modifier="number"
             theme="pink-theme"
-          />
+          >
+            {total > 0 && total}
+          </Button>
         </Link>
       </nav>
     </header>
