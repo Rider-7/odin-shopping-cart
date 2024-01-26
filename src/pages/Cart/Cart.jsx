@@ -7,17 +7,26 @@ import ProductBox from '../../components/ProductBox/ProductBox';
 import Quantity from '../../components/Quantity/Quantity';
 
 export default function Cart() {
-  const [cart] = useOutletContext().cartState;
+  const [cart, setCart] = useOutletContext().cartState;
+
+  function removeProduct(e) {
+    const uid = parseInt(e.currentTarget.dataset.uid, 10);
+    console.log(uid);
+    setCart(cart.filter((product) => product.uid !== uid));
+  }
 
   let final = 0;
   const List = cart.map((product) => {
     final += (product.price * product.quantity);
     return (
       <ProductBox
+        isCart
         key={product.uid}
+        uid={product.uid}
         name={product.name}
         price={product.price}
         quantity={product.quantity}
+        onClick={removeProduct}
       />
     );
   });

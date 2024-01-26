@@ -6,6 +6,7 @@ import Button from '../Button/Button';
 
 export default function ProductBox(props) {
   const {
+    uid,
     name,
     price,
     quantity,
@@ -20,7 +21,7 @@ export default function ProductBox(props) {
       <h2 className={styles.name}>{name}</h2>
       <div className={styles.quantities}>
         <div className={styles.left}>
-          { isCart && <Button modifier="small" onClick={onClick} />}
+          { isCart && <button data-uid={uid} type="button" onClick={onClick}>Remove</button>}
           <Quantity name="Quantity" value={quantity} />
           { isInput && (
             <>
