@@ -46,7 +46,7 @@ export default function Shop() {
     <>
       <h1 className={styles.section}>SHOP</h1>
       <div className={styles.container}>
-        <h2 className={styles.title}>SHOES</h2>
+        <h2 className={styles.title}>PRODUCTS</h2>
         <div className={styles.flex}>
           {List}
         </div>
