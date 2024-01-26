@@ -7,7 +7,7 @@ import ProductBox from '../../components/ProductBox/ProductBox';
 import Quantity from '../../components/Quantity/Quantity';
 
 export default function Cart() {
-  const [cart, setCart] = useOutletContext().cartState;
+  const [cart] = useOutletContext().cartState;
 
   let final = 0;
   const List = cart.map((product) => {
@@ -26,15 +26,19 @@ export default function Cart() {
     <>
       <h1 className={styles.section}>CART</h1>
       <div className={styles.cart}>
-        <div className={styles.list}>
-          {List}
-          <div className={styles.final}>
-            <Quantity name="FINAL" value={`$${final}`} />
-          </div>
-          <div className={styles.button}>
-            <Button theme="pink-theme" modifier="small">CHECKOUT</Button>
-          </div>
-        </div>
+        {List.length <= 0
+          ? <span>Cart Empty</span>
+          : (
+            <div className={styles.list}>
+              {List}
+              <div className={styles.final}>
+                <Quantity name="FINAL" value={`$${final}`} />
+              </div>
+              <div className={styles.button}>
+                <Button theme="pink-theme" modifier="small">CHECKOUT</Button>
+              </div>
+            </div>
+          )}
       </div>
     </>
   );
