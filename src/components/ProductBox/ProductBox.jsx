@@ -5,7 +5,14 @@ import Quantity from '../Quantity/Quantity';
 import Button from '../Button/Button';
 
 export default function ProductBox(props) {
-  const { name, price, quantity, isInput, handleQuantity } = props;
+  const {
+    name,
+    price,
+    quantity,
+    isInput,
+    isCart,
+    onClick,
+  } = props;
 
   const amount = price * quantity;
   return (
@@ -13,11 +20,12 @@ export default function ProductBox(props) {
       <h2 className={styles.name}>{name}</h2>
       <div className={styles.quantities}>
         <div className={styles.left}>
+          { isCart && <Button modifier="small" onClick={onClick} />}
           <Quantity name="Quantity" value={quantity} />
           { isInput && (
             <>
-              <Button modifier="small" value="-" onClick={handleQuantity}>-</Button>
-              <Button modifier="small" value="+" onClick={handleQuantity}>+</Button>
+              <Button modifier="small" value="-" onClick={onClick}>-</Button>
+              <Button modifier="small" value="+" onClick={onClick}>+</Button>
             </>
           )}
           <Quantity name="Unit Price" value={`$${price}`} />
@@ -34,4 +42,5 @@ ProductBox.propTypes = {
 
 ProductBox.defaultProps = {
   isInput: false,
+  isCart: false,
 };

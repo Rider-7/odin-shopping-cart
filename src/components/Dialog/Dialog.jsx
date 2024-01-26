@@ -51,7 +51,7 @@ export default function Dialog(props) {
     <dialog id="modal" className={styles.dialog} ref={dialog}>
       <div className={styles.flex}>
         <Product imgUrl={imgUrl} name={name} description={description} price={price} />
-        <ProductBox isInput name="Product Name" price={price} quantity={quantity} handleQuantity={handleQuantity} />
+        <ProductBox isInput name="Product Name" price={price} quantity={quantity} onClick={handleQuantity} />
         <Footer closeDialog={closeDialog} addToCart={addToCart} />
       </div>
     </dialog>
