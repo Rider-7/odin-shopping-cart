@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { useOutletContext } from 'react-router-dom';
 
 import styles from './Dialog.module.css';
 
@@ -16,6 +17,7 @@ export default function Dialog(props) {
   } = props;
 
   const [quantity, setQuantity] = useState(0);
+  const [cart, setCart] = useOutletContext();
   const dialog = useRef();
 
   function handleQuantity(e) {
@@ -24,12 +26,21 @@ export default function Dialog(props) {
     } else if (quantity < 99) setQuantity((q) => q + 1);
   }
 
-  function closeDialog() {
-    if (dialog.current.open) dialog.current.close();
+  function addToCart() {
+    setCart([
+      ...cart,
+      {
+        id,
+        name,
+        price,
+        quantity,
+      },
+    ]);
+    console.log(cart);
   }
 
-  function addToCart() {
-    
+  function closeDialog() {
+    if (dialog.current.open) dialog.current.close();
   }
 
   return (

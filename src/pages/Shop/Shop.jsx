@@ -1,4 +1,6 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
+
+
 import styles from './Shop.module.css';
 
 import Card from '../../components/Card/Card';
@@ -17,6 +19,7 @@ export default function Shop() {
     const product = products.find((p) => p.id === id);
     const productModal = (
       <Dialog
+        id={product.id}
         name={product.title}
         price={product.price}
         description={product.description}

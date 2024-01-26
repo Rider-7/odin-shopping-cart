@@ -1,21 +1,13 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import { useState } from 'react';
 
 import styles from './ProductBox.module.css';
 import Quantity from '../Quantity/Quantity';
 import Button from '../Button/Button';
 
 export default function ProductBox(props) {
-  const { name, price, isInput } = props;
-  const [quantity, setQuantity] = useState(0);
+  const { name, price, quantity, isInput, handleQuantity } = props;
+
   const amount = price * quantity;
-
-  function handleQuantity(e) {
-    if (e.currentTarget.value === '-') {
-      if (quantity > 0) setQuantity((q) => q - 1);
-    } else if (quantity < 99) setQuantity((q) => q + 1);
-  }
-
   return (
     <div className={styles.box}>
       <h2 className={styles.name}>{name}</h2>
