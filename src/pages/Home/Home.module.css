@@ -1,48 +1,74 @@
 @import url("../../templates/font.module.css");
 
-.header {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ [id="root"] {
   display: flex;
-  justify-content: space-between;
-  margin: 32px;
-  margin-bottom: 20px;
-  gap: 64px;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .logo {
   font-family: 'Italiana', sans-serif;
-  font-size: 64px;
-  text-decoration: none;
-  color: #000000;
-
-  &.large {
-    font-size: 148px;
-  }
 }
-.hero {
 
+.hero {
   display: flex;
   align-items: center;
-  gap: 20px;
-  width: fit-content;
+  gap: 1rem;
+  font-size: 9rem;
+  width: max-content;
+  height: 100vh;
   margin: auto;
 
   & .container {
-    width: fit-content;
+    width: max-content;
     margin-left: 64px;
   }
 
-  & .button-menu {
-    margin-top: 32px;
+  & .menu {
+    margin-top: 0.4em;
+    font-size: 0.35em;
     display: flex;
     justify-content: right;
+
+    & .button {
+      padding: 0.25em;
+    }
   }
 
   & .image {
-    width: 620px;
+    width: clamp(320px, 38vw, 640px);
     z-index: -1;
   }
 }
 
 .link {
   text-decoration: none;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media not screen and (min-width: 992px) {
+
+  .hero {
+    font-size: clamp(3.8rem, 16vw, 9rem);
+    margin-bottom: 7rem;
+    box-sizing: border-box;
+
+    & .container {
+      margin: 0;
+    }
+
+    & .menu {
+      justify-content: center;
+      font-size: 0.55em;
+    }
+
+    & .image {
+    display: none;
+    }
+  }
 }
