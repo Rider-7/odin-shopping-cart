@@ -44,12 +44,9 @@ export default function Shop() {
 
   return (
     <>
-      <h1 className={styles.section}>SHOP</h1>
-      <div className={styles.container}>
-        <h2 className={styles.title}>PRODUCTS</h2>
-        <div className={styles.flex}>
-          {List}
-        </div>
+      <h1 className={styles.title}>SHOP</h1>
+      <div className={styles.grid}>
+        {List}
       </div>
       {Modal}
     </>
