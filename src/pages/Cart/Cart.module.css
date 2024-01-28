@@ -1,42 +1,25 @@
-.section {
-  font-family: 'Jacques Francois', sans-serif;
+@import url("../../templates/font.module.css");
+
+.title {
   margin: 0;
   padding: 0;
-  margin-inline: 72px;
-  margin-block: 20px;
-  
-  font-size: 60px;
+  margin-inline: 4rem;
+  margin-block: 1.2rem;
+
+  font-family: 'Jacques Francois', sans-serif;
+  font-size: clamp(3rem, 10.4vw, 4rem);
   font-weight: 500;
 }
 
 .cart {
-  border-radius: 8px;
-  background-color: #D9D9D9;
-  padding: 20px;
-  width: max-content;
-  margin: auto; 
-
-  & .list {
-    display:flex;
-    align-items: end;
-    flex-direction: column;
-    gap: 20px;
-
-    & .final {
-      border-radius: 4px;
-      width: max-content;
-      font-family: 'Anonymous Pro', sans-serif;
-      font-weight: bold;
-      font-size: 24px;
-      color: #FFFFFF;
-      padding: 20px;
-      background-color: #6B6B6B;
-    }
-
-    & .button {
-      width: max-content;
-    }
-  }
+  padding: 0.5rem;
+  max-width: 800px;
+  margin-inline: auto;
 }
 
-
+/* Large devices (laptops/desktops, 992px and up) */
+@media not screen and (min-width: 992px) {
+  .title {
+    margin-inline: auto;
+  }
+}

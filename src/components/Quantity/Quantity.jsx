@@ -7,9 +7,9 @@ export default function Quantity(props) {
   const { name, value } = props;
 
   return (
-    <div className={styles.container}>
+    <div className={styles.quantity}>
       { name && <span>{`${name}:`}</span>}
-      <span className={styles.value}>{value}</span>
+      <div className={styles.value}>{value}</div>
     </div>
   );
 }

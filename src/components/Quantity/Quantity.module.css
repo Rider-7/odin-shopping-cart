@@ -1,5 +1,9 @@
-.container {
-  text-wrap: nowrap;
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 .value {
