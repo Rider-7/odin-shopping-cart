@@ -3,9 +3,7 @@ import { useOutletContext } from 'react-router-dom';
 
 import styles from './Dialog.module.css';
 
-import ProductBox from '../ProductBox/ProductBox';
-import Button from '../Button/Button';
-import Quantity from '../Quantity/Quantity';
+import Button from '../../../components/Button/Button';
 
 export default function Dialog(props) {
   const {
@@ -49,28 +47,11 @@ export default function Dialog(props) {
 
   return (
     <dialog id="modal" className={styles.dialog} ref={dialog}>
-      <div className={styles.flex}>
-        <Product imgUrl={imgUrl} name={name} description={description} price={price} />
-        <ProductBox isInput name="Product Name" price={price} quantity={quantity} onClick={handleQuantity} />
-        <Footer closeDialog={closeDialog} addToCart={addToCart} />
-      </div>
-    </dialog>
-  );
-}
-
-function Product(props) {
-  const {
-    imgUrl,
-    name,
-    description,
-    price
-  } = props;
-
-  return (
-    <div className={styles.product}>
-      <Screen imgUrl={imgUrl} />
+      <img className={styles.image} src={imgUrl} alt="" />
       <Information name={name} description={description} price={price} />
-    </div>
+        {/* <ProductBox isInput name="Product Name" price={price} quantity={quantity} onClick={handleQuantity} />
+        <Footer closeDialog={closeDialog} addToCart={addToCart} /> */}
+    </dialog>
   );
 }
 
@@ -83,17 +64,6 @@ function Information(props) {
       <p className={styles.description}>
         {description}
       </p>
-      <span className={styles.price}><Quantity value={`$${price}`} /></span>
-    </div>
-  );
-}
-
-function Screen(props) {
-  const { imgUrl } = props;
-
-  return (
-    <div className={styles.screen}>
-      <img className={styles.image} src={imgUrl} alt="" />
     </div>
   );
 }

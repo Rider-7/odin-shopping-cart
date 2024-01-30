@@ -4,7 +4,7 @@ import { useState } from 'react';
 import styles from './Shop.module.css';
 
 import Card from '../../components/Card/Card';
-import Dialog from '../../components/Dialog/Dialog';
+import Dialog from './Dialog/Dialog';
 
 // Temporary data
 import products from '../../assets/data/products.json';
