@@ -16,7 +16,7 @@ export default function ProductList(props) {
   let final = 0;
 
   if (cart.length <= 0) {
-    List = <span>Cart is Empty</span>;
+    List = <span className={styles.empty}>Cart is Empty</span>;
   } else {
     List = cart.map((product) => {
       final += (product.price * product.quantity);
