@@ -1,0 +1,71 @@
+dialog::backdrop {
+  background: #0000009f;
+}
+
+dialog[open] {
+  display:flex;
+  flex-direction: column;
+  gap: 1.25em;
+  width: clamp(240px, 70vw, 1000px);
+  border-radius: 8px;
+  border: 0;
+  padding: 0.75em;
+  font-size: clamp(0.7em, 3vw, 1em);
+
+  & .content {
+    display: flex;
+    justify-content: center;
+    gap: 1.25em;
+  
+    & .image{
+      object-fit: contain;
+      height: clamp(200px, 30vw, 280px);
+      aspect-ratio: 4 / 3;
+    }
+    
+    & .information {
+      display: flex;
+      flex-direction: column;
+      border-block: 2px solid #6B6B6B;
+      gap: 0.5em;
+      max-height: clamp(200px, 30vw, 280px);
+      overflow-wrap: anywhere;
+      overflow-y: auto;
+    
+      & .name {
+        font-size: 1.5em;
+        margin: 0;
+        flex-shrink: 0;
+      }
+    
+      & .description {
+        font-size: 1em;
+        margin: 0;
+      }
+    }
+  }
+  
+  & .controls {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* 4768px (Tablet) and under */
+@media not screen and (min-width: 769px) {
+dialog {
+  gap: 0.75em;
+
+  & .content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25em;
+  }
+  
+  & .image{
+    object-fit: contain;
+    height: clamp(200px, 30vw, 280px);
+    aspect-ratio: 4 / 3;
+  }
+}
+}

@@ -1,4 +1,4 @@
-import ProductBox from '../../../components/ProductBox/ProductBox';
+import ProductBox from '../ProductBox/ProductBox';
 import Quantity from '../../../components/Quantity/Quantity';
 import Button from '../../../components/Button/Button';
 
