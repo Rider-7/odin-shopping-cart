@@ -48,6 +48,9 @@
   .box {
     & .title {
       text-align: center;
+      max-height: 3lh;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     & .units {
