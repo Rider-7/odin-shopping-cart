@@ -11,7 +11,7 @@ export default function Card(props) {
   } = props;
 
   return (
-    <button type="button" className={`${styles.card} ${theme}`} onClick={onClick} data-id={dataId}>
+    <button type="button" className={styles.card} onClick={onClick} data-id={dataId}>
       <img className={styles.image} src={imgUrl} alt="" />
       <div className={styles.description}>
         <div className={styles.name}>{name}</div>

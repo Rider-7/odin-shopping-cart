@@ -1,27 +1,4 @@
-@import url("../../templates/font.module.css");
-/* Themes */
-/*
-.default-theme {
-  background-color: #000000;
-  color: #FFFFFF;
 
-  &:active:enabled {
-    background-color: #FFFFFF;
-    color: #000000;
-  }
-}
-
-.pink-theme {
-  background-color: #EE4E91;
-  color: #FFFFFF;
-
-  &:active:enabled {
-    background-color: #2E3D8F;
-  }
-}
-*/
-
-/* Base Styling */
 button {
   padding-inline: 0.6rem;
   padding-block: 0.3rem;
@@ -39,27 +16,8 @@ button {
 
   cursor: pointer;
   user-select: none;
-
-  /* transition: 600ms; */
-
-  &:active:enabled {
-    transition: 30ms;
-  }
-
+  
   & .img {
     height: 1.5em;
   }
 }
-/* Modifier */
-/*
-  .number {
-    composes:button;
-    font-family: 'Anonymous Pro', sans-serif;
-  }
-
-  .small {
-    composes:button;
-    height: 36px;
-    font-size: 16px;
-  }
-  */

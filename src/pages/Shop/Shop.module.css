@@ -1,5 +1,3 @@
-@import url("../../templates/font.module.css");
-
 body:has(dialog[open]) {
   overflow: hidden;
 }

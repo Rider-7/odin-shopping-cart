@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 
 import Router from './pages/Router';
 
+import './assets/fonts.module.css';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router />

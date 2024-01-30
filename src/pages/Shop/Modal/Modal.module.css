@@ -54,19 +54,19 @@ dialog[open] {
 
 /* 4768px (Tablet) and under */
 @media not screen and (min-width: 769px) {
-dialog {
-  gap: 0.75em;
+  dialog {
+    gap: 0.75em;
 
-  & .content {
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.25em;
+    & .content {
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.25em;
+    }
+    
+    & .image{
+      object-fit: contain;
+      height: clamp(200px, 30vw, 280px);
+      aspect-ratio: 4 / 3;
+    }
   }
-  
-  & .image{
-    object-fit: contain;
-    height: clamp(200px, 30vw, 280px);
-    aspect-ratio: 4 / 3;
-  }
-}
 }
