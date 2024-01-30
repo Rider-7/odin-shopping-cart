@@ -31,14 +31,17 @@ export default function ProductList(props) {
         />
       );
     });
+    List.push = (
+      <>
+        <div className={styles.total}><Quantity name="TOTAL" value={`$${final}`} /></div>
+        <Button className={styles.checkout}>CHECKOUT</Button>
+      </>
+    );
   }
 
   return (
     <div className={styles['product-list']}>
       {List}
-      <div className={styles.total}><Quantity name="TOTAL" value={`$${final}`} /></div>
-      <Button className={styles.checkout}>CHECKOUT</Button>
-
     </div>
   );
 }

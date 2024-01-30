@@ -11,7 +11,7 @@ export default function Cart() {
     <>
       <h1 className={styles.title}>CART</h1>
       <div className={styles.cart}>
-          <ProductList cart={cart} setCart={setCart} />
+        <ProductList cart={cart} setCart={setCart} />
       </div>
     </>
   );
