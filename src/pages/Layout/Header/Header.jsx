@@ -1,7 +1,7 @@
 import { Link, useOutletContext } from 'react-router-dom';
 
-import Button from '../Button/Button';
-import cartSVG from '../../assets/icon/cart.svg';
+import Button from '../../../components/Button/Button';
+import cartSVG from '../../../assets/icon/cart.svg';
 
 import styles from './Header.module.css';
 

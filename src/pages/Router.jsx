@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from '../../pages/Home/Home';
-import Shop from '../../pages/Shop/Shop';
-import Layout from '../../pages/Layout';
-import Cart from '../../pages/Cart/Cart';
+import Home from './Home/Home';
+import Shop from './Shop/Shop';
+import Layout from './Layout/Layout';
+import Cart from './Cart/Cart';
 
 export default function Router() {
   const router = createBrowserRouter([
