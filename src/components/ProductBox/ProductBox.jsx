@@ -1,5 +1,5 @@
-import Quantity from '../../../components/Quantity/Quantity';
-import Button from '../../../components/Button/Button';
+import Quantity from '../Quantity/Quantity';
+import Button from '../Button/Button';
 
 import styles from './ProductBox.module.css';
 
